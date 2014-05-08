@@ -1,0 +1,25 @@
+# Load things.
+[[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
+
+# Adjust $PATH.
+export PATH=$HOME/.composer/vendor/bin:$PATH
+
+# Locale settings.
+export LC_ALL=en_US.UTF-8  
+export LANG=en_US.UTF-8
+
+# Misc settings.
+export EDITOR=nano
+
+# Terminal colours settings.
+export CLICOLOR=1
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+
+# Source Home Brew bash-completion file.
+[[ -f $(brew --prefix)/etc/bash_completion ]] && . $(brew --prefix)/etc/bash_completion
+
+# Source Drush bashrc file.
+[[ -f ~/.drush_bashrc ]] && . ~/.drush_bashrc
+
+# Source drush.complete.sh file.
+[[ -f ~/.drush/drush.complete.sh ]] && . ~/.drush/drush.complete.sh
