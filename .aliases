@@ -1,5 +1,8 @@
-# Dir navigation
+# Dir navigation.
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias ~='cd ~'
+
+# Utilities
+alias ls='ls --color'
