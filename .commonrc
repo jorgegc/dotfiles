@@ -1,9 +1,6 @@
 # Load things.
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
 
-# Adjust $PATH.
-export PATH=$HOME/.composer/vendor/bin:$PATH
-
 # Locale settings.
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
@@ -15,11 +12,22 @@ export EDITOR=nano
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
-# Source Home Brew bash-completion file.
-[[ -f $(brew --prefix)/etc/bash_completion ]] && . $(brew --prefix)/etc/bash_completion
+# Composer PHP dependency manager.
+if [! -z "$(which composer)"]; then
+  export PATH=$HOME/.composer/vendor/bin:$PATH
+fi
 
-# Source Drush bashrc file.
-[[ -f ~/.drush_bashrc ]] && . ~/.drush_bashrc
+# Homebrew package manager.
+if [! -z "$(which brew)"]; then
+  # Source bash-completion file.
+  [[ -f $(brew --prefix)/etc/bash_completion ]] && . $(brew --prefix)/etc/bash_completion
+fi
 
-# Source drush.complete.sh file.
-[[ -f ~/.drush/drush.complete.sh ]] && . ~/.drush/drush.complete.sh
+# Drush command-line shell and scripting interface for Drupal.
+if [! -z "$(which drush)"]; then
+  # Source Drush bashrc file.
+  [[ -f ~/.drush_bashrc ]] && . ~/.drush_bashrc
+
+  # Source drush.complete.sh file.
+  [[ -f ~/.drush/drush.complete.sh ]] && . ~/.drush/drush.complete.sh
+fi
