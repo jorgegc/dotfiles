@@ -1,0 +1,17 @@
+# Make nano the default editor.
+export EDITOR="nano"
+
+# Larger bash history (default is 500).
+export HISTFILESIZE=10000
+export HISTSIZE=10000
+
+# Make some commands not show up in history.
+export HISTIGNORE="ls:cd:pwd:exit:date:* --help"
+
+# Pretty shell with some colours.
+export CLICOLOR=1
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+
+# Prefer US English and use UTF-8
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"

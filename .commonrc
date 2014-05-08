@@ -1,30 +1,11 @@
-# Load things.
-[[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
-
-# Locale settings.
-export LC_ALL=en_US.UTF-8  
-export LANG=en_US.UTF-8
-
-# Misc settings.
-export EDITOR=nano
-
-# Terminal colours settings.
-export CLICOLOR=1
-export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
-
-# Composer PHP dependency manager.
-if [! -z "$(which composer)"]; then
-  export PATH=$HOME/.composer/vendor/bin:$PATH
-fi
-
 # Homebrew package manager.
-if [! -z "$(which brew)"]; then
+if [ ! -z "$(which brew)" ]; then
   # Source bash-completion file.
   [[ -f $(brew --prefix)/etc/bash_completion ]] && . $(brew --prefix)/etc/bash_completion
 fi
 
 # Drush command-line shell and scripting interface for Drupal.
-if [! -z "$(which drush)"]; then
+if [ ! -z "$(which drush)" ]; then
   # Source Drush bashrc file.
   [[ -f ~/.drush_bashrc ]] && . ~/.drush_bashrc
 
