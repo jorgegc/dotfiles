@@ -1,6 +1,6 @@
 [user]
-	name = Jorge Castro
-	email = jorgegc@gmail.com
+  name = Jorge Castro
+  email = jorgegc@gmail.com
 
 [branch]
   autosetuprebase = always
@@ -37,7 +37,7 @@
   log = true
 
 [push]
-  default = simple
+  default = current
 
 [rerere]
   enabled = 1
