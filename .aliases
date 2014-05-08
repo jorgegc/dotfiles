@@ -4,5 +4,5 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias ~='cd ~'
 
-# Utilities
-alias ls='ls --color'
+# Utilities..
+alias ll='ls -l'
