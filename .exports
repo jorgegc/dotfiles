@@ -8,7 +8,7 @@ export HISTSIZE=10000
 # Make some commands not show up in history.
 export HISTIGNORE="ls:cd:pwd:exit:date:* --help"
 
-# Pretty shell with some colours.
+# Make the output of the `ls` look good (and colourful).
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
