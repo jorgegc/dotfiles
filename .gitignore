@@ -1,0 +1,3 @@
+# Ignore Drush cache and modules.
+.drush/cache/
+.drush/registry_rebuild/
