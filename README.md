@@ -1,5 +1,9 @@
 # Jorge's dotfiles
 
+If you are a [Drupal](http://drupal.org/) developer you will probably find something interesting in my dotfiles.
+
+They don't have much in them but they have just enough to get me going whenever I need to work in different environments.
+
 ## Instalation
 
 ### Prerequisites
@@ -8,34 +12,34 @@
 
 Optional, but recommended:
 
-* [drush](https://github.com/drush-ops/drush)
+* [drush](https://github.com/drush-ops/drush) - A command line shell and scripting interface for Drupal.
 
 ### Bootstrapper
 
 The bootstrapper will back up all your existing files before it installs
-anything new, it'll also warn you if a dependency isn't met.
+anything new. It'll also warn you if a dependency isn't met.
 
 ``` bash-session
 $ bash < <( curl https://raw.githubusercontent.com/jorgegc/dotfiles/master/bootstrap.sh )
 ```
 
-Don't worry, all your old files will be backed up!
+Don't worry, all your old files will be backed up in `~/.dotfiles-backup`.
 
-### Stay Updated
+## Upgrading
 
-Run the bootstrapper again!
+Upgrading is easy, all you need to do is run the bootstrapper again.
 
 ``` bash-session
 $ ~/.dotfiles/scripts/bootstrap.sh
 ```
 
-## Configuration
+## Extending
 
 ### Changes to the `$PATH`
 
-If `~/.path` exists, it will be sourced along with the other files. You can use this to change the `$PATH` without the need to fork this entire repository.
+If `~/.dotfiles/.path` exists, it will be sourced along with the other files. You can use this to change the `$PATH` without having to fork this entire repository.
 
-Here’s an example `~/.path` file that adds `~/utils` to the `$PATH`:
+Here’s an example `~/.dotfiles/.path` file that adds `~/utils` to the `$PATH`:
 
 ```bash-session
 export PATH="$HOME/utils:$PATH"
@@ -43,9 +47,9 @@ export PATH="$HOME/utils:$PATH"
 
 ### Extra configuration
 
-If `~/.extra` exists, it will be sourced along with the other files. You can use this to add a few custom commands without the need to fork this entire repository, or to add commands you don’t want to commit to a public repository.
+Same as the `.path`, if `~/.dotfiles/.extra` exists, it will be sourced along with the other files. You can use this to add a few custom commands without having to fork this entire repository or to add commands you don’t want to commit to a public repository.
 
-My `~/.extra` at work looks something like this:
+My `~/.dotfiles/.extra` at work looks something like this:
 
 ```bash-shell
 # Make sure I use the work email address when committing to Git.
@@ -57,9 +61,9 @@ GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
 ```
 
-You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It's probably better to [fork this repository](https://github.com/jorgegc/dotfiles/fork) instead, though.
+You could also use `~/.dotfiles/.extra` to override settings, functions and aliases from my dotfiles repository. However, it would probably better to [fork this repository](https://github.com/jorgegc/dotfiles/fork) instead.
 
-## Files
+## What is included
 
 ### Shell
 
