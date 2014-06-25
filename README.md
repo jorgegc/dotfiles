@@ -4,6 +4,8 @@ If you are a [Drupal](http://drupal.org/) developer you will probably find somet
 
 They don't have much in them but they have just enough to get me going whenever I need to work in different environments.
 
+![Screenshot of Jorge's terminal](http://i.imgur.com/JMagLIX.png)
+
 ## Instalation
 
 ### Prerequisites
