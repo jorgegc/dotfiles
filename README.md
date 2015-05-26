@@ -22,7 +22,7 @@ The bootstrapper will back up all your existing files before it installs
 anything new. It'll also warn you if a dependency isn't met.
 
 ``` bash-session
-$ bash < <( curl https://raw.githubusercontent.com/jorgegc/dotfiles/master/bootstrap.sh )
+$ bash <(curl -fsSL https://raw.githubusercontent.com/jorgegc/dotfiles/master/scripts/bootstrap.sh)
 ```
 
 Don't worry, all your old files will be backed up in `~/.dotfiles-backup`.
