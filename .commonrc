@@ -6,9 +6,12 @@ fi
 
 # Drush command-line shell and scripting interface for Drupal.
 if [ ! -z "$(which drush)" ]; then
-  # Source Drush bashrc file.
-  [[ -f ~/.drush_bashrc ]] && . ~/.drush_bashrc
+  # Source Drush bash customisations.
+  [[ -f ~/.drush/drush.bashrc ]] && . ~/.drush/drush.bashrc
 
-  # Source drush.complete.sh file.
+  # Source Drush completion.
   [[ -f ~/.drush/drush.complete.sh ]] && . ~/.drush/drush.complete.sh
+
+  # Source Drush prompt customisations.
+  [[ -f ~/.drush/drush.prompt.sh ]] && . ~/.drush/drush.prompt.sh
 fi
