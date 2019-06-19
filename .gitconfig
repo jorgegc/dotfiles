@@ -1,62 +1,34 @@
 [user]
-  name = Jorge Castro
-  email = jorgegc@gmail.com
+	name = Jorge Castro
+	email = jorgegc@gmail.com
 
 [branch]
-  autosetuprebase = always
+	autosetuprebase = always
 
 [color]
-  ui = auto
+	ui = auto
 
 [color "branch"]
-  current = yellow reverse
-  local   = yellow
-  remote  = green
+	current = yellow reverse
+	local   = yellow
+	remote  = green
 
 [color "diff"]
-  meta = yellow 
-  frag = magenta 
-  old  = red 
-  new  = green 
+	meta = yellow
+	frag = magenta
+	old  = red
+	new  = green
 
 [color "status"]
-  added     = yellow
-  changed   = green
-  untracked = cyan
-
-[diff]
-  tool = Kaleidoscope
-
-[diff "exif"]
-  textconv = exiftool
-
-[difftool]
-  prompt = false
+	added     = yellow
+	changed   = green
+	untracked = cyan
 
 [merge]
-  log = true
+	log = true
 
 [push]
-  default = current
+	default = simple
 
 [rerere]
-  enabled = 1
-
-[url "git@github.com:"]
-  insteadOf     = "gh:"
-  pushInsteadOf = "github:"
-  pushInsteadOf = "git://github.com/"
-
-[url "git://github.com/"]
-  insteadOf = "github:"
-
-[url "git@gist.github.com:"]
-  insteadOf     = "gst:"
-  pushInsteadOf = "gist:"
-  pushInsteadOf = "git://gist.github.com/"
-
-[url "git://gist.github.com/"]
-  insteadOf = "gist:"
-
-[url "git@heroku.com:"]
-  insteadOf = "heroku:"
+	enabled = 1

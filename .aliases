@@ -1,24 +1,28 @@
-# Dir navigation.
+#!/usr/bin/env bash
+
+# Easier navigation.
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias ~='cd ~'
 
 # Detect which `ls` flavor is in use.
-if ls --color > /dev/null 2>&1; then # GNU `ls`.
+if ls --color > /dev/null 2>&1; then
+  # GNU `ls`.
   colorflag="--color"
-else # OS X `ls`.
+else
+  # macOS `ls`.
   colorflag="-G"
-fi
+fi;
 
-# List all files colorized in long format.
+# List all files colorised in long format.
 alias ll="ls -lF ${colorflag}"
 
-# List all files colorized in long format, including dot files.
+# List all files colorised in long format, including dot files.
 alias la="ls -laF ${colorflag}"
 
 # List only directories.
 alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
 
-# Always use color output for `ls`.
-#alias ls="command ls ${colorflag}"
+# Always use colour output for `ls`.
+alias ls="command ls ${colorflag}"
