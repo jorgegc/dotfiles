@@ -1,11 +1,11 @@
 # Homebrew package manager.
-if [ ! -z "$(which brew)" ]; then
+if command -v brew > /dev/null; then
   # Source bash-completion file.
   [[ -f $(brew --prefix)/etc/bash_completion ]] && . $(brew --prefix)/etc/bash_completion
 fi
 
 # Drush command-line shell and scripting interface for Drupal.
-if [ ! -z "$(which drush)" ]; then
+if command -v drush > /dev/null; then
   # Source Drush bash customisations.
   [[ -f ~/.drush/drush.bashrc ]] && . ~/.drush/drush.bashrc
 
